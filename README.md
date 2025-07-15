@@ -3,3 +3,4 @@
 # Contributors
 
 AbdulMatin Nuhu
+Yurika Sugita
