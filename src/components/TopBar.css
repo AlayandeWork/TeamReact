@@ -1,0 +1,18 @@
+.css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input,
+label.css-1ew92b2-MuiFormLabel-root-MuiInputLabel-root,
+label.css-2hy7sk-MuiFormLabel-root-MuiInputLabel-root,
+label.css-1ew92b2-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: #fff !important;
+}
+
+svg.css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon,
+svg.css-10v61y-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon {
+  fill: #fff;
+}
+
+.css-j218zi-MuiInputBase-root-MuiInput-root-MuiSelect-root::before {
+  border-bottom: 1px solid #fff !important;
+}
+.css-j218zi-MuiInputBase-root-MuiInput-root-MuiSelect-root::after {
+  border-bottom: 2px solid #fff !important;
+}
