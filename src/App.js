@@ -11,7 +11,7 @@ export default function App() {
   const [popupData, setPopupData] = useState(null);
 
   useEffect(() => {
-    if (mapRef.current) return; // map already initialized
+    if (mapRef.current) return; 
 
     // Initialize the map
     const map = L.map('map', {
@@ -59,3 +59,15 @@ export default function App() {
     };
   }, []);
   
+  async function fetchWeather(lat, lng) {
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=${API_KEY}`;
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error('Failed to fetch weather data.');
+      return await response.json();
+    } catch (error) {
+      console.error(error);
+      alert('Error fetching weather data.');
+      return null;
+    }
+  }
