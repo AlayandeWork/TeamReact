@@ -84,3 +84,7 @@ export default function App() {
       return null;
     }
   }
+
+  function closePopup() {
+    setPopupData(null);
+  }
