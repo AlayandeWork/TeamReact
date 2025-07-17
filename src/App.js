@@ -58,7 +58,7 @@ export default function App() {
       mapRef.current = null;
     };
   }, []);
-  
+
   async function fetchWeather(lat, lng) {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=${API_KEY}`;
     try {
@@ -68,6 +68,19 @@ export default function App() {
     } catch (error) {
       console.error(error);
       alert('Error fetching weather data.');
+      return null;
+    }
+  }
+
+  async function fetchTimezone(lat, lng) {
+    const url = `https://api.timezonedb.com/v2.1/get-time-zone?key=${TIMEZONE_API_KEY}&format=json&by=position&lat=${lat}&lng=${lng}`;
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error('Failed to fetch timezone data.');
+      return await response.json();
+    } catch (error) {
+      console.error(error);
+      alert('Error fetching timezone data.');
       return null;
     }
   }
