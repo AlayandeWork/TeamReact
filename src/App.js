@@ -88,3 +88,41 @@ export default function App() {
   function closePopup() {
     setPopupData(null);
   }
+
+  return (
+    <>
+      <header>
+        <h1>Interactive Weather Map</h1>
+        <p>Click on any location to get weather and time details!</p>
+        <button className="mapbutton">
+          <a href="index.html" className="map">ROVER</a>
+        </button>
+      </header>
+
+      <div id="map"></div>
+
+      {popupData && (
+        <div id="popup-dialog">
+          <button id="close-dialog" onClick={closePopup}>X</button>
+          <h2 id="location-name">
+            {popupData.weatherData.name || `Lat: ${popupData.lat.toFixed(2)}, Lon: ${popupData.lng.toFixed(2)}`}
+          </h2>
+          <p><strong>Weather:</strong> {popupData.weatherData.weather[0].description}</p>
+          <p><strong>Temperature:</strong> {popupData.weatherData.main.temp} °C</p>
+          <p>
+            <strong>Time and Date:</strong>{' '}
+            {new Date(popupData.timezoneData.formatted).toLocaleString('en-US', {
+              timeStyle: 'short',
+              dateStyle: 'medium',
+            })}
+          </p>
+          <p><strong>Day/Night:</strong> {popupData.weatherData.weather[0].icon.includes('d') ? 'Day' : 'Night'}</p>
+        </div>
+      )}
+
+      <footer>
+        <p>Powered by OpenWeatherMap and Leaflet</p>
+      </footer>
+    </>
+  );
+}
