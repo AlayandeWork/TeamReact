@@ -1,20 +1,23 @@
 /* App.css */
 
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  overflow: hidden;
+  height: 100vh;
   margin: 0;
+  position: relative;
   font-family: Arial, sans-serif;
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   background-color: #3b7181;
   color: white;
   padding: 1rem;
   text-align: center;
+  z-index: 10;
 }
 
 .mapbutton a {
@@ -24,8 +27,12 @@ header {
 }
 
 #map {
-  height: calc(100vh - 140px);  /* Make sure the map has height */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;  /* Make sure the map has height */
   width: 100%;
+  z-index: 1;
 }
 
 #popup-dialog {
