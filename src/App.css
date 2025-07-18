@@ -61,24 +61,27 @@ header p {
   border-radius: 15px;
   padding: 1.5rem;
   z-index: 2000;
-  max-width: 250px;
+  max-width: 260px;
 }
 #popup-dialog h2 {
   margin-top: 0;
-  font-size: 1.2rem;
-  color: #2f4f4f;
+  font-size: 1.5rem;
+  color: #f1593e;
 }
-
-#popup-dialog p {
+#popup-dialog p strong {
+  color: #0e0d0d;
+}
+#popup-dialog p  {
   margin: 0.4rem 0;
   font-size: 0.95rem;
+  color: #0e0d0d;
 }
 
 #popup-dialog.hidden {
   display: none;
 }
 
-#popup-dialog button {
+/* #popup-dialog button {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -86,15 +89,17 @@ header p {
   background: none;
   font-size: 1.2rem;
   cursor: pointer;
-}
+} */
 
 #close-dialog {
   position: absolute;
   top: 5px;
   right: 10px;
-  background: none;
+  background: transparent;
   border: none;
   font-size: 1.2rem;
+  font-weight: bold;
+  color: #070707;
   cursor: pointer;
 }
 
