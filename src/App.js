@@ -94,9 +94,6 @@ export default function App() {
       <header>
         <h1>Interactive Weather Map</h1>
         <p>Click on any location to get weather and time details!</p>
-        <button className="mapbutton">
-          <a href="index.html" className="map">ROVER</a>
-        </button>
       </header>
 
       <div id="map"></div>
