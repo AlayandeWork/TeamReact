@@ -44,11 +44,10 @@ header p {
 
 #map {
   position: absolute;
-  top: 100px; /* space for header */
+  top: 75px; 
   left: 0;
   width: 100%;
-  height: calc(100vh - 150px); /* leaves space for header and footer */
-  z-index: 1;
+  height: 100vh; 
   border-top: 2px solid #ccc;
 }
 
@@ -63,9 +62,16 @@ header p {
   padding: 1.5rem;
   z-index: 2000;
   max-width: 250px;
-  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  animation: fadeIn 0.5s ease; */
+}
+#popup-dialog h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #2f4f4f;
+}
+
+#popup-dialog p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
 }
 
 #popup-dialog.hidden {
