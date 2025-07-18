@@ -12,6 +12,7 @@ body {
 
 header {
   position: fixed;
+  height: 50px;
   top: 0;
   left: 0;
   width: 100%;
@@ -35,20 +36,20 @@ header p {
   font-weight: 300;
 }
 
-.mapbutton a {
+/* .mapbutton a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-}
+} */
 
 #map {
-  border: 1px solid #c92a2a;
   position: absolute;
-  top: 60px;
+  top: 100px; /* space for header */
   left: 0;
-  height: 100%;  /* Make sure the map has height */
   width: 100%;
+  height: calc(100vh - 150px); /* leaves space for header and footer */
   z-index: 1;
+  border-top: 2px solid #ccc;
 }
 
 #popup-dialog {
@@ -93,10 +94,10 @@ header p {
 
 footer {
   text-align: center;
-  margin: 1rem 0;
+  margin: 0;
   font-size: 0.9rem;
   color: #555;
-    position: fixed;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background: #3b7181;
