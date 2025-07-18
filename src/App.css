@@ -1,6 +1,9 @@
 /* App.css */
 
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
 }
@@ -19,7 +22,9 @@ header {
 }
 
 #map {
-  height: 500px;  /* Make sure the map has height */
+  height: 100vh;  /* Make sure the map has height */
+  width: 100%;
+  flex: 1;
 }
 
 #popup-dialog {
