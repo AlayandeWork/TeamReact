@@ -1,8 +1,9 @@
-# This is a demo project for the TeamReact
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Contributors
-
-AbdulMatin Nuhu  
+AbdulMatin Nuhu
 Yurika Sugita
+Prakriti Archarya
 Munkhtsolmon Udval
-Prakriti Acharya
