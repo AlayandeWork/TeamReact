@@ -3,7 +3,9 @@
 body {
   overflow: hidden;
   height: 100vh;
+  background-color: #f4f6f8;
   margin: 0;
+  padding: 0;
   position: relative;
   font-family: Arial, sans-serif;
 }
@@ -14,10 +16,23 @@ header {
   left: 0;
   width: 100%;
   background-color: #3b7181;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   color: white;
-  padding: 1rem;
+  padding: 0.8rem 1.5rem;
   text-align: center;
   z-index: 10;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin: 0.2rem 0 0;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .mapbutton a {
@@ -27,24 +42,29 @@ header {
 }
 
 #map {
+  border: 1px solid #c92a2a;
   position: absolute;
-  top: 0;
+  top: 60px;
   left: 0;
-  height: 100vh;  /* Make sure the map has height */
+  height: 100%;  /* Make sure the map has height */
   width: 100%;
   z-index: 1;
 }
 
 #popup-dialog {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: white;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffffcc;
   border: 1px solid #ccc;
-  padding: 1rem;
-  z-index: 1000;
+  border-radius: 15px;
+  padding: 1.5rem;
+  z-index: 2000;
   max-width: 250px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease; */
 }
 
 #popup-dialog.hidden {
@@ -61,9 +81,27 @@ header {
   cursor: pointer;
 }
 
+#close-dialog {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
 footer {
   text-align: center;
   margin: 1rem 0;
   font-size: 0.9rem;
   color: #555;
+    position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #3b7181;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  z-index: 10;
 }
