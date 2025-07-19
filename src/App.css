@@ -1,44 +1,88 @@
 /* App.css */
 
 body {
+  overflow: hidden;
+  height: 100vh;
+  background-color: #f4f6f8;
   margin: 0;
+  padding: 0;
+  position: relative;
   font-family: Arial, sans-serif;
 }
 
 header {
-  background-color: #007acc;
+  position: fixed;
+  height: 50px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #3b7181;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   color: white;
-  padding: 1rem;
+  padding: 0.8rem 1.5rem;
   text-align: center;
+  z-index: 1000;
 }
 
-.mapbutton a {
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin: 0.2rem 0 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* .mapbutton a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-}
+} */
 
 #map {
-  height: 500px;  /* Make sure the map has height */
+  position: absolute;
+  top: 75px; 
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 140px); 
+  border-top: 2px solid #ccc;
 }
 
 #popup-dialog {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: white;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
   border: 1px solid #ccc;
-  padding: 1rem;
-  z-index: 1000;
-  max-width: 250px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  z-index: 2000;
+  max-width: 260px;
+}
+#popup-dialog h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #f1593e;
+}
+#popup-dialog p strong {
+  color: #0e0d0d;
+}
+#popup-dialog p  {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  color: #0e0d0d;
 }
 
 #popup-dialog.hidden {
   display: none;
 }
 
-#popup-dialog button {
+/* #popup-dialog button {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -46,11 +90,34 @@ header {
   background: none;
   font-size: 1.2rem;
   cursor: pointer;
+} */
+
+#close-dialog {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #070707;
+  cursor: pointer;
+}
+
+#close-dialog:hover {
+  color: #d33;
 }
 
 footer {
   text-align: center;
-  margin: 1rem 0;
+  margin: 0;
   font-size: 0.9rem;
   color: #555;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #3b7181;
+  color: white;
+  padding: 0.5rem;
+  z-index: 100;
 }
