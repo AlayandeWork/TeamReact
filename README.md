@@ -1,9 +1,9 @@
 # Getting Started with Create React App.
 
 # Contributors
-AbdulMatin Nuhu
-Yurika Sugita
-Prakriti Archarya
+AbdulMatin Nuhu,
+Yurika Sugita,
+Prakriti Archarya,
 Munkhtsolmon Udval
 
 # Project Setup: React, Node.js, and Leaflet Installation
