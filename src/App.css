@@ -21,12 +21,12 @@ header {
   color: white;
   padding: 0.8rem 1.5rem;
   text-align: center;
-  z-index: 10;
+  z-index: 1000;
 }
 
 header h1 {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   letter-spacing: 1px;
 }
 
@@ -47,7 +47,7 @@ header p {
   top: 75px; 
   left: 0;
   width: 100%;
-  height: 100vh; 
+  height: calc(100vh - 140px); 
   border-top: 2px solid #ccc;
 }
 
@@ -56,9 +56,10 @@ header p {
   top: 20%;
   left: 50%;
   transform: translateX(-50%);
-  background: #ffffffcc;
+  background: #fff;
   border: 1px solid #ccc;
   border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 1.5rem;
   z-index: 2000;
   max-width: 260px;
@@ -103,6 +104,10 @@ header p {
   cursor: pointer;
 }
 
+#close-dialog:hover {
+  color: #d33;
+}
+
 footer {
   text-align: center;
   margin: 0;
@@ -113,7 +118,6 @@ footer {
   width: 100%;
   background: #3b7181;
   color: white;
-  text-align: center;
   padding: 0.5rem;
-  z-index: 10;
+  z-index: 100;
 }
